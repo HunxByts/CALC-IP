@@ -1,7 +1,7 @@
 ## CALC-IP
 kalkulator IP addres kelas C menggunakan python3
 
-<img src=" ">
+<img src="https://github.com/HunxByts/CALC-IP/blob/main/asset/ipip.png">
 
 ### Instalasi di Linux (deb)
 ```
@@ -13,7 +13,7 @@ sudo apt-get install python3
 ```Download file zip di bawah ini``` 
 <details>
 <summary>:zap: Download zip :</summary>                                                                                       
-<a href="https://github.com/HunxByts/xorhunx/archive/refs/heads/main.zip">Download xorhunx</a>
+<a href="https://github.com/HunxByts/CALC-IP/archive/refs/heads/main.zip">Download xorhunx</a>
 </details>
 
 ### Instalasi di Termux
@@ -33,7 +33,7 @@ cd CALC-IP
 ### Penggunaan tool di Windows 
 ```
 Download file zip
-lalu jalankan aplikasinya
+lalu jalankan aplikasi calc-ip.exe
 ```
 
 <details>
