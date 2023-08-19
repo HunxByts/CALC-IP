@@ -1,0 +1,81 @@
+#!/usr/bin/python
+#MAU RECODE ??? IZIN DULU LAH,  MINIMAL TAG AKUN GITHUB MIMIN YANG MENGARAH KE AKUN INI, LEBIH GAMPANG SI PAKE FORK
+#KALAU DI ATAS TIDAK DI IKUTI MAKA AKAN MENDAPATKAN DOSA KARENA MIMIN GAK IKHLAS
+#“Wahai orang-orang yang beriman! Janganlah kamu saling memakan harta sesamamu dengan jalan yang batil,” (QS. An Nisaa': 29). Rasulullah SAW juga melarang umatnya untuk mengambil hak orang lain tanpa izin.
+
+import sys
+import time
+from sys import stderr
+
+# VARIABLE BUAT WARNA CUYY
+Bl='\033[30m' 
+Re='\033[1;31m'
+Gr='\033[1;32m'
+Ye='\033[1;33m'
+Blu='\033[1;34m'
+Mage='\033[1;35m'
+Cy='\033[1;36m'
+Wh='\033[1;37m'
+
+# AUTOKETIK CUY!!
+def autoketik(x): 
+    for y in x + "\n":
+        sys.stdout.write(y)
+        sys.stdout.flush()
+        time.sleep(0.10)
+
+
+def Logo():
+    stderr.writelines(f"""{Wh}
+
+██╗████████╗██╗   ██╗███╗   ██╗ ██████╗       ██╗██████╗ 
+██║╚══██╔══╝██║   ██║████╗  ██║██╔════╝       ██║██╔══██╗
+██║   ██║   ██║   ██║██╔██╗ ██║██║  ███╗█████╗██║██████╔╝
+██║   ██║   ██║   ██║██║╚██╗██║██║   ██║╚════╝██║██╔═══╝ 
+██║   ██║   ╚██████╔╝██║ ╚████║╚██████╔╝      ██║██║     
+╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝       ╚═╝╚═╝     
+             {Wh}<> {Mage}Tool By Fais | HunX {Wh}<>
+""")
+Logo()
+
+while True:
+    try:
+        def itung():
+            ip = input(f"\nMasukan IP Adress Ex 192.168.1.1/24 : {Mage}")
+            print(f"{Wh}=======================================================")
+            okt4 =  (input(f"Masukan Oktet ke 1-3 Ex 192.168.1   : {Mage}"))
+            okt3 = int(input(f"{Wh}Masukan Oktet ke-3 Ex 1             : {Mage}"))
+            host = int(input(f"{Wh}Masukan prfix Ex 24                 : {Mage}"))
+
+            #Mencari Pangkat dan Host
+            pkt = 32 - host
+            pkt1 = pow(2, pkt)
+            pkt2 = pkt1 - 2
+
+            #Mencari Na / Network Address
+            okt3a = okt3 // pkt1 * pkt1
+            
+            #Mencari BC /Broadcast
+            Bc = okt3a + pkt1 - 1
+
+            #Mencari Usefull / Range
+            Us1 = okt3a + 1
+            Us2 = Bc -1
+
+            #Mencari Subnetmask / Netmask 
+            Sm = 256 - pkt1
+
+            print(f"\n{Mage}<< {Wh}HASIL HITUNGAN {Mage}>>")
+            autoketik(f"\n{Wh}Total Pangkat   : {Mage}{pkt1}")
+            autoketik(f"{Wh}Host ID         : {Mage}{pkt2}")
+            autoketik(f"{Wh}Network         : {Mage}{okt4}.{okt3a}")
+            autoketik(f"{Wh}Broadcast       : {Mage}{okt4}.{Bc}")
+            autoketik(f"{Wh}IP Range Awal   : {Mage}{okt4}.{Us1}")
+            autoketik(f"{Wh}IP Range Akhir  : {Mage}{okt4}.{Us2}")
+            autoketik(f"{Wh}Subnet Mask     : {Mage}255.255.255.{Sm}")
+            print(f"{Wh}=======================================================")
+        itung()
+    except KeyboardInterrupt:
+        print(f"{Wh}Program Berhenti{Mage}!{Wh}")
+    Logo()
+    itung()
