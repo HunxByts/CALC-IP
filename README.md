@@ -13,7 +13,7 @@ sudo apt-get install python3
 ```Download file zip di bawah ini``` 
 <details>
 <summary>:zap: Download zip :</summary>                                                                                       
-<a href="https://github.com/HunxByts/CALC-IP/archive/refs/heads/main.zip">Download xorhunx</a>
+<a href="https://github.com/HunxByts/CALC-IP/archive/refs/heads/main.zip">Download calc-ip</a>
 </details>
 
 ### Instalasi di Termux
